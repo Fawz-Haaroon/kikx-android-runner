@@ -1,0 +1,27 @@
+----------
+1. ERROR in /storage/emulated/0/.sketchware/mysc/601/app/src/main/java/com/luvbyte/kikx/MainActivity.java (at line 67)
+	private ValueCallback<Uri[]> filePathCallback;
+	                             ^^^^^^^^^^^^^^^^
+Illegal modifier for parameter filePathCallback; only final is permitted
+----------
+2. ERROR in /storage/emulated/0/.sketchware/mysc/601/app/src/main/java/com/luvbyte/kikx/MainActivity.java (at line 68)
+	private final int FILE_CHOOSER_REQUEST = 100;
+	                  ^^^^^^^^^^^^^^^^^^^^
+Illegal modifier for parameter FILE_CHOOSER_REQUEST; only final is permitted
+----------
+3. ERROR in /storage/emulated/0/.sketchware/mysc/601/app/src/main/java/com/luvbyte/kikx/MainActivity.java (at line 135)
+	if (MainActivity.this.filePathCallback != null) {
+	                      ^^^^^^^^^^^^^^^^
+filePathCallback cannot be resolved or is not a field
+----------
+4. ERROR in /storage/emulated/0/.sketchware/mysc/601/app/src/main/java/com/luvbyte/kikx/MainActivity.java (at line 136)
+	MainActivity.this.filePathCallback.onReceiveValue(null);
+	                  ^^^^^^^^^^^^^^^^
+filePathCallback cannot be resolved or is not a field
+----------
+5. ERROR in /storage/emulated/0/.sketchware/mysc/601/app/src/main/java/com/luvbyte/kikx/MainActivity.java (at line 139)
+	MainActivity.this.filePathCallback = filePathCallback;
+	                  ^^^^^^^^^^^^^^^^
+filePathCallback cannot be resolved or is not a field
+----------
+5 problems (5 errors)
