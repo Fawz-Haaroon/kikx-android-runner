@@ -1,0 +1,17 @@
+# Build output
+build/
+out/
+*.apk
+*.aab
+
+# IDE/editor files
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Archives
+*.zip
