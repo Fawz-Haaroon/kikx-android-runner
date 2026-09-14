@@ -2,17 +2,10 @@ name: Build Android APK
 
 on:
 workflow_dispatch:
-push:
-branches:
-- main
 
 jobs:
 build:
 runs-on: ubuntu-latest
-
-defaults:
-  run:
-    working-directory: Android-Studio-Project
 
 steps:
   - name: Checkout source
@@ -26,9 +19,10 @@ steps:
       cache: gradle
 
   - name: Make Gradle executable
-    run: chmod +x gradlew
+    run: chmod +x Android-Studio-Project/gradlew
 
   - name: Build release APK
+    working-directory: Android-Studio-Project
     run: ./gradlew assembleRelease
 
   - name: Upload APK
