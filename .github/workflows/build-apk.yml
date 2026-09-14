@@ -8,10 +8,10 @@ build:
 runs-on: ubuntu-latest
 
 steps:
-  - name: Checkout source
+  - name: Checkout
     uses: actions/checkout@v4
 
-  - name: Set up JDK
+  - name: Setup Java
     uses: actions/setup-java@v4
     with:
       distribution: temurin
@@ -21,7 +21,7 @@ steps:
   - name: Make Gradle executable
     run: chmod +x Android-Studio-Project/gradlew
 
-  - name: Build release APK
+  - name: Build APK
     working-directory: Android-Studio-Project
     run: ./gradlew assembleRelease
 
